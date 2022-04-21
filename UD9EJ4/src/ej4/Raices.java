@@ -13,6 +13,8 @@ public class Raices {
 		this.c = c;
 	}
 
+	
+	//getDiscriminate
 	public double getDiscriminate() {
 		
 	    double discriminante = (Math.pow(b, 2) - (4 * a * c));
@@ -21,6 +23,7 @@ public class Raices {
 
 	}
 
+	//devuelve boolean si tiene reaices
 	public boolean tieneRaices() {
 
 		boolean tieneraices = false;
@@ -33,6 +36,7 @@ public class Raices {
 
 	}
 
+	//devuelve boolean si tiene una raiz
 	public boolean tieneRaiz() {
 
 		boolean tieneraices = false;
@@ -45,6 +49,7 @@ public class Raices {
 
 	}
 
+	//calcularemos el valor de la raizes
 	public void calcular() {
 		
 		//prinera solucion
@@ -52,7 +57,7 @@ public class Raices {
         {
             double x1=(-b+Math.sqrt(getDiscriminate()))/(2*a);
             double x2=(-b-Math.sqrt(getDiscriminate()))/(2*a);
-            System.out.println("Hay dos números reales: x1 ="+x1+"x2="+x2);
+            System.out.println("Hay dos números reales: x1 = "+x1+" x2= "+x2);
         }
         else if (getDiscriminate()==0)
         {
@@ -70,11 +75,14 @@ public class Raices {
 		
 		
 		if(tieneRaices()){
-	          System.out.println("Tiene raices imaginarias");
+			
+			double x1 = ((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+            double x2 = ((-b) - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+      System.out.println("X1 = "+x1+" X2 = "+x2);
 	          }else{
-		            double x1 = ((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-		            double x2 = ((-b) - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-	          System.out.println("X1 = "+x1+" X2 = "+x2);
+		          System.out.println("Tiene raices imaginarias");
+
+		            
 	        }     
 
 	}
@@ -82,11 +90,11 @@ public class Raices {
 	public void obtenerRaiz() {
 		
 		if(tieneRaiz()){
-	          System.out.println("Tiene raices imaginarias");
-	          }else{
-		            double x1 = ((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-		            double x2 = ((-b) - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-	          System.out.println("X1 = "+x1+" X2 = "+x2);
+			 double x1 = ((-b) + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+	          System.out.println("X1 = "+x1);	          }
+		else{
+	        	  System.out.println("Tiene raices imaginarias");
+		           
 	        }    
 
 	}
